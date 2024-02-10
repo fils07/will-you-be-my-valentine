@@ -7,58 +7,46 @@ const yesButton3 = document.querySelector(".container-3 .yes");
 
 yesButton.addEventListener("click", () => {
   gsap.to(".container-1", {
-    display: "none",
-    duration: 0,
-  });
-  gsap.to(".container-3", {
-    display: "none",
-    duration: 0,
+    x: "100%",
   });
   gsap.to(".container-2", {
-    display: "flex",
-    duration: 0,
+    x: "0%",
+  });
+  gsap.to(".container-3", {
+    x: "100%",
   });
   gsap.to("body", {
     backgroundColor: "#FF2F6F",
-    duration: 0,
   });
 });
 
 noButton.addEventListener("click", () => {
   gsap.to(".container-1", {
-    display: "none",
-    duration: 0,
-  });
-  gsap.to(".container-3", {
-    display: "flex",
-    duration: 0,
+    x: "-200%",
   });
   gsap.to(".container-2", {
-    display: "none",
-    duration: 0,
+    x: "-100%",
+  });
+  gsap.to(".container-3", {
+    x: "0",
   });
   gsap.to("body", {
     backgroundColor: "#09090b",
-    duration: 0,
   });
 });
 
 yesButton3.addEventListener("click", () => {
   gsap.to(".container-1", {
-    display: "none",
-    duration: 0,
-  });
-  gsap.to(".container-3", {
-    display: "none",
-    duration: 0,
+    x: "-200%",
   });
   gsap.to(".container-2", {
-    display: "flex",
-    duration: 0,
+    x: "0%",
+  });
+  gsap.to(".container-3", {
+    x: "100%",
   });
   gsap.to("body", {
     backgroundColor: "#FF2F6F",
-    duration: 0,
   });
 });
 
@@ -112,4 +100,12 @@ noButton.addEventListener("mouseleave", () => {
     });
     return;
   }
+});
+
+yesButton.addEventListener("mouseenter", () => {
+  document.querySelector(".luv").style.animationPlayState = "running";
+});
+
+yesButton.addEventListener("mouseleave", () => {
+  document.querySelector(".luv").style.animationPlayState = "paused";
 });
