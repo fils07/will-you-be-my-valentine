@@ -2,6 +2,7 @@ import "./style.scss";
 import gsap from "gsap";
 
 const noButton = document.querySelector(".container-1 .no");
+const yesLink = document.querySelector(".yes-link");
 const yesButton = document.querySelector(".container-1 .yes");
 const yesButton3 = document.querySelector(".container-3 .yes");
 
@@ -108,4 +109,12 @@ yesButton.addEventListener("mouseenter", () => {
 
 yesButton.addEventListener("mouseleave", () => {
   document.querySelector(".luv").style.animationPlayState = "paused";
+});
+
+yesLink.addEventListener("mouseenter", () => {
+  document.querySelector(".kiss").style.animationPlayState = "running";
+});
+
+yesLink.addEventListener("mouseleave", () => {
+  document.querySelector(".kiss").style.animationPlayState = "paused";
 });

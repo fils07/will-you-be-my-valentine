@@ -153,11 +153,16 @@ body {
     align-items: center;
     gap: 0rem;
     transform: translateX(-100%);
+    .kiss {
+      width: 150px;
+      animation: heart 1s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+      animation-play-state: paused;
+    }
     h2 {
       font-weight: bold;
       font-size: 2rem;
       text-align: left;
-      margin-bottom: 2rem;
+      margin: 2rem 0;
     }
   }
 
